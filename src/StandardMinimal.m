@@ -4,5 +4,7 @@ function tab = StandardMinimal(k)
     
     rng(sSM, 'v4');
     tab = randi(m, 1, k);
+    
+    sSM = tab(k);
 end
 

@@ -10,6 +10,9 @@ function PValeur = Frequency(x,nb)
   end
   
   Sobs=abs(Sn)/sqrt(length(x)*nb);
+  disp('Sobs=')
+  disp(Sobs)
   PValeur=2*(1-cdf('Normal',Sobs, 0, 1));
+
 
 end

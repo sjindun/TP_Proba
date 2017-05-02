@@ -11,4 +11,6 @@ function tab = RANDU (k)
         courant = sol;
         tab(1,i)=sol;
     end
+    
+    sRANDU = tab(k);
 end

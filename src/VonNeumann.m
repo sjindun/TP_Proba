@@ -14,4 +14,6 @@ function tab = VonNeumann (k)
         tab(1,i)=sol;
         courant = sol;
     end
+    
+    sVN = tab(k);
 end

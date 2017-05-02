@@ -4,5 +4,7 @@ function tab = MersenneTwister( k )
     
     rng(sMT, 'twister');
     tab = randi(m, 1, k);
+    
+    sMT = tab(k);
 end
 
