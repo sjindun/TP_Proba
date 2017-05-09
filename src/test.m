@@ -83,13 +83,51 @@ function tab = test
 %     figure(1);
 %     hist(tabBin,20);
     
-            %% Q7 : Loi normale
-    tabNom=zeros(1,1000);
-    n=20;
-    p=0.2;
+%             %% Q7 : Loi normale
+%     tabNom=zeros(1,1000);
+%     n=20;
+%     p=0.2;
+%     for i=1:1000
+%         tabNom(1,i) =LoiNormale(n,p); 
+%     end
+%     figure(1);
+%     hist(tabNom,20);
+    
+%                 %% Q8 : Inversion et rejet
+%     inv=zeros(1,1000);
+%     rej=zeros(1,1000);
+% 
+%     for i=1:1000
+%         inv(1,i) =Inversion();
+%         rej(1,i) =Rejet();
+%     end
+%     
+%     c=2/(log(2)*log(2));
+%     x=0:0.05:1;
+%     y= c * (log(1+x)/(1+x));
+%     
+%     figure(3);
+%     plot(x,y);
+%     
+%     
+%     figure(1);
+%     hist(inv,20);
+%     figure(2);
+%     hist(rej,20);
+
+                %% Q9 : Exponentielle
+    exp=zeros(1,1000);
+    x = 0:0.01:5;
+    %exp2=pdf('exp',x,2);
+    exp2=exppdf(x,2);
     for i=1:1000
-        tabNom(1,i) = LoiNormale(n,p); 
+        exp(1,i) =Exponentielle(2);
+        
     end
+
     figure(1);
-    hist(tabNom,20);
+    hist(exp,20);
+    figure(2);
+    plot(x, exp2);
+
 end

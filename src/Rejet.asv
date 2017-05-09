@@ -1,0 +1,10 @@
+function simRej = Rejet()
+
+U=rand(1,1);
+Y=rand(1,1);
+
+f=(2/(log(2)*log(2)))*(log(1+Y)/(1+Y));
+
+
+end
+
