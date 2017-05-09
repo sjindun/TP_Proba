@@ -115,19 +115,34 @@ function tab = test
 %     figure(2);
 %     hist(rej,20);
 
-                %% Q9 : Exponentielle
-    exp=zeros(1,1000);
-    x = 0:0.01:5;
-    %exp2=pdf('exp',x,2);
-    exp2=exppdf(x,2);
-    for i=1:1000
-        exp(1,i) =Exponentielle(2);
-        
-    end
+%                 %% Q9 : Exponentielle
+%     exp=zeros(1,1000);
+%     x = 0:0.01:5;
+%     %exp2=pdf('exp',x,2);
+%     exp2=exppdf(x,2);
+%     for i=1:1000
+%         exp(1,i) =Exponentielle(2);
+%         
+%     end
+% 
+%     figure(1);
+%     hist(exp,20);
+%     figure(2);
+%     plot(x, exp2);
 
-    figure(1);
-    hist(exp,20);
-    figure(2);
-    plot(x, exp2);
 
+                %% Q10 : FileMM1
+      D=10;
+      pas=0.05;
+     [a,d]=FileMM1(2,1.5,D);
+     e=Evolution(a,d,D,pas);
+     disp('arrivées=')
+     disp(a)
+     disp('departs=')
+     disp(d)
+     %disp('evolution=')
+     %disp(e)
+     figure(1)
+     x = 0:pas:D;
+     stairs(x,e(1,:))
 end
