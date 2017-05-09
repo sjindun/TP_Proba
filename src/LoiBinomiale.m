@@ -13,8 +13,6 @@ iterateur=n;
 while ((iterateur>1)&&(densites(1,iterateur-1)>valeur))
     iterateur=iterateur-1;
 end
-disp(densites)
-disp(valeur)
 Real=iterateur-1;
 
 end

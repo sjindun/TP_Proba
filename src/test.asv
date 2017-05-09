@@ -73,19 +73,23 @@ function tab = test
 %     disp(Pvaleur4)
    
     
-        %% Q6 : Loi binomiale
+%         %% Q6 : Loi binomiale
+%     tabBin=zeros(1,1000);
+%     n=20;
+%     p=0.2;
+%     for i=1:1000
+%         tabBin(1,i) = LoiBinomiale(n,p); 
+%     end
+%     figure(1);
+%     hist(tabBin,20);
+    
+            %% Q : Loi binomiale
     tabBin=zeros(1,1000);
     n=20;
-    p=
+    p=0.2;
     for i=1:1000
-        tabBin(1,i) = LoiBinomiale; 
+        tabBin(1,i) = LoiBinomiale(n,p); 
     end
-    disp('PValeur1=')
-    disp(Pvaleur1)
-    disp('PValeur2=')
-    disp(Pvaleur2)
-    disp('PValeur3=')
-    disp(Pvaleur3)
-    disp('PValeur4=')
-    disp(Pvaleur4)
+    figure(1);
+    hist(tabBin,20);
 end
