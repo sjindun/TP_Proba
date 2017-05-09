@@ -4,7 +4,7 @@ function tab = test
     global sMT;
     global sSM;
 
-    % à initialiser à début
+    % à initialiser au début
 %     graine = 215;
 %     sVN = graine;
 %     sRANDU = graine;
@@ -104,11 +104,14 @@ function tab = test
 %     
 %     c=2/(log(2)*log(2));
 %     x=0:0.05:1;
-%     y= c * (log(1+x)/(1+x));
+%     y=0:0.05:1;
+%     for i=1:20
+%         y(i) = c*log(1+x(i)) / (1+x(i));
+%     end
+% 
 %     
 %     figure(3);
 %     plot(x,y);
-%     
 %     
 %     figure(1);
 %     hist(inv,20);
@@ -118,8 +121,8 @@ function tab = test
 %                 %% Q9 : Exponentielle
 %     exp=zeros(1,1000);
 %     x = 0:0.01:5;
-%     %exp2=pdf('exp',x,2);
-%     exp2=exppdf(x,2);
+%     exp2=pdf('exp',x,1/2); %ATTENTION mu = 1/lambda
+%     
 %     for i=1:1000
 %         exp(1,i) =Exponentielle(2);
 %         
@@ -131,18 +134,19 @@ function tab = test
 %     plot(x, exp2);
 
 
-                %% Q10 : FileMM1
-      D=10;
-      pas=0.05;
-     [a,d]=FileMM1(2,1.5,D);
-     e=Evolution(a,d,D,pas);
-     disp('arrivées=')
-     disp(a)
-     disp('departs=')
-     disp(d)
-     %disp('evolution=')
-     %disp(e)
-     figure(1)
-     x = 0:pas:D;
-     stairs(x,e(1,:))
+%                 %% Q10 : FileMM1
+%       D=60;
+%       pas=0.05;
+%      [a,d]=FileMM1(2,1.5,D);
+%      e=Evolution(a,d,D,pas);
+%      disp('arrivées=')
+%      disp(a)
+%      disp('departs=')
+%      disp(d)
+%      %disp('evolution=')
+%      %disp(e)
+%      figure(1)
+%      x = 0:pas:D;
+%      stairs(x,e(1,:))
+
 end
