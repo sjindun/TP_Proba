@@ -7,20 +7,20 @@ function PValeur = Runs(x,nb)
           Sn=Sn+bit;
       end
   end
-  ppi=Sn/(length(x)*nb);
+  pi=Sn/(length(x)*nb);
   
   to=2/sqrt(length(x)*nb);
   
-  if (abs(ppi-0.5)>=to)
+  if abs(pi-0.5)>=to
       PValeur=0;
   else
-      Vn=0;
+      Vn=1;
       for i=1:length(x)
         if i< length(x) 
             for j=1:nb
                 if(j<nb)               
                     bit=bitget(x(i),j);
-                    bit2=bitget(x(i),j+1);
+                    bit2=bitget(x(i),j);
                 else
                     bit=bitget(x(i),j);
                     bit2=bitget(x(i+1),1);
@@ -36,8 +36,8 @@ function PValeur = Runs(x,nb)
         else
             for j=1:nb-1               
                 bit=bitget(x(i),j);
-                bit2=bitget(x(i),j+1);
-                if (bit==bit2)
+                bit2=bitget(x(i),j);
+                if bit==bit2
                     r=0;
                 else
                     r=1;
@@ -48,7 +48,7 @@ function PValeur = Runs(x,nb)
       end
       Vn=Vn+1;
       n=length(x)*nb;
-      int=abs(Vn-(2*n*ppi*(1-ppi)))/(2*sqrt(n)*ppi*(1-ppi));
+      int=abs(Vn-(2*n*pi*(1-pi)))/(2*sqrt(n)*pi*(1-pi));
       PValeur=2*(1-cdf('Normal',int,0,1));
       
   end
